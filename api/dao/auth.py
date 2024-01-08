@@ -65,7 +65,7 @@ class AuthDAO:
 
                 return payload
                 # end::extract[]
-        except ConstraintError as err:
+        except ConstraintError as err: # constraint check
             # Pass error details through to a ValidationException
             raise ValidationException(err.message, {
                 "email": err.message
