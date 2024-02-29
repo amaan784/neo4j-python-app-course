@@ -1,10 +1,12 @@
 = Building Neo4j Applications with Python
 
+- NOTE: this repo is heavily dependent on the sandbox instance especially local hosts IP Address and requires cloning and rebase while pulling.
+
 > Learn how to interact with Neo4j from Python using the Neo4j Python Driver
 
 This repository accompanies the link:https://graphacademy.neo4j.com/courses/app-python/[Building Neo4j Applications with Python course^] on link:https://graphacademy.neo4j.com/[Neo4j GraphAcademy^].
 
-For a complete walkthrough of this repository,  link:https://graphacademy.neo4j.com/courses/app-python/[enrol now^].
+For a complete walkthrough of this repository,  link:https://graphacademy.neo4j.com/courses/app-python/[enroll now^].
 
 == A Note on comments
 
