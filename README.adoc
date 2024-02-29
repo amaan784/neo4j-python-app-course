@@ -1,6 +1,10 @@
+- NOTE: this forked repo is heavily dependent on neo4j python course's sandbox instance which expires every 3-7 days. 
+- It is affected by the sandbox instance and the gitpod workspace ip address or maybe local ip address. 
+- It requires starting a new workspace from the course then cloning and rebase while pulling.
+
+
 = Building Neo4j Applications with Python
 
-- NOTE: this repo is heavily dependent on the sandbox instance especially local hosts IP Address and requires cloning and rebase while pulling.
 
 > Learn how to interact with Neo4j from Python using the Neo4j Python Driver
 

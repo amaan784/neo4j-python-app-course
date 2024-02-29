@@ -65,13 +65,14 @@ class AuthDAO:
 
                 return payload
                 # end::extract[]
-        except ConstraintError as err: # constraint check
+        except ConstraintError as err:
             # Pass error details through to a ValidationException
             raise ValidationException(err.message, {
                 "email": err.message
             })
         # end::catch[]
     # end::register[]
+
     """
     This method should attempt to find a user by the email address provided
     and attempt to verify the password.
@@ -119,9 +120,12 @@ class AuthDAO:
         payload["nbf"] = iat
         payload["exp"] = iat + current_app.config.get('JWT_EXPIRATION_DELTA')
 
+        # converting to jwt secret token to string since test 3 was failing
+        key = str(self.jwt_secret) 
+
         return jwt.encode(
             payload,
-            self.jwt_secret,
+            key, 
             algorithm='HS256'
         )
     # end::generate[]
