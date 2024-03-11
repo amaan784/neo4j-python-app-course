@@ -22,9 +22,25 @@ class FavoriteDAO:
     """
     # tag::all[]
     def all(self, user_id, sort = 'title', order = 'ASC', limit = 6, skip = 0):
-        # TODO: Open a new session
-        # TODO: Retrieve a list of movies favorited by the user
-        return popular
+        # Open a new session
+        # tag::session[]
+        with self.driver.session() as session:
+        # end::session[]
+            # tag::lambda[]
+            # Retrieve a list of movies favorited by the user
+            movies = session.execute_read(lambda tx: tx.run("""
+                MATCH (u:User {{userId: $userId}})-[r:HAS_FAVORITE]->(m:Movie)
+                RETURN m {{
+                    .*,
+                    favorite: true
+                }} AS movie
+                ORDER BY m.`{0}` {1}
+                SKIP $skip
+                LIMIT $limit
+                """.format(sort, order), userId=user_id, limit=limit, skip=skip).value("movie"))
+            # end::lambda[]
+
+            return movies
     # end::all[]
 
 
