@@ -64,3 +64,15 @@ Unit Tests (only if the connection to a sandbox instance is present)-
 3) pytest tests/03_registering_a_user__test.py
 
 4) pytest tests/04_handle_constraint_errors__test.py
+
+5) pytest tests/05_authentication__test.py
+
+6) pytest tests/06_rating_movies__test.py
+
+7) 
+
+8) 
+
+9)
+
+10)
