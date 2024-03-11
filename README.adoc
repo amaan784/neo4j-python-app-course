@@ -76,4 +76,4 @@ flask run
 
 9) pytest -s tests/09_genre_list__test.py
 
-10)
+10) pytest -s tests/10_genre_details__test.py
