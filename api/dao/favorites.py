@@ -91,8 +91,9 @@ class FavoriteDAO:
     a `NotFoundError` should be thrown.
     """
     # tag::remove[]
-   def remove(self, user_id, movie_id):
-        # Define a transaction function to delete the HAS_FAVORITE relationship within a Write Transaction
+    
+    def remove(self, user_id, movie_id):
+       # Define a transaction function to delete the HAS_FAVORITE relationship within a Write Transaction
         def remove_from_favorites(tx, user_id, movie_id):
             row = tx.run("""
                 MATCH (u:User {userId: $userId})-[r:HAS_FAVORITE]->(m:Movie {tmdbId: $movieId})
@@ -102,7 +103,7 @@ class FavoriteDAO:
                     favorite: false
                 } AS movie
                 """, userId=user_id, movieId=movie_id).single()
-
+    
             # If no rows are returnedm throw a NotFoundException
             if row == None:
                 raise NotFoundException()

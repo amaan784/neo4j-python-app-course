@@ -69,7 +69,7 @@ Unit Tests (only if the connection to a sandbox instance is present)-
 
 6) pytest tests/06_rating_movies__test.py
 
-7) 
+7) pytest tests/07_favorites_list__test.py
 
 8) 
 
