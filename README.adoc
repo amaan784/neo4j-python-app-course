@@ -1,4 +1,5 @@
-- NOTE: this forked repo is heavily dependent on neo4j python course's sandbox instance which expires every 3-7 days. 
+== NOTE: 
+- this forked repo is heavily dependent on neo4j python course's sandbox instance which expires every 3-7 days. 
 - It is affected by the sandbox instance and the gitpod workspace ip address or maybe local ip address. 
 - It requires starting a new workspace from the course then cloning and rebase while pulling.
 
@@ -55,7 +56,7 @@ export FLASK_APP=api
 export FLASK_ENV=development
 flask run
 
-Unit Tests (only if the connection to a sandbox instance is present)-
+== Unit Tests (only if the connection to a sandbox instance is present)-
 
 1) pytest tests/01_connect_to_neo4j__test.py
 
