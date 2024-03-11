@@ -49,6 +49,15 @@ class AuthDAO:
         try:
             # tag::call_create[]
             with self.driver.session() as session:
+                # Add constraint to ensure email property is unique
+                result = session.execute_write(create_user, email, encrypted, name)
+                session.run("""
+                    CREATE CONSTRAINT UserEmailUnique
+                    IF NOT EXISTS
+                    FOR (user:User)
+                    REQUIRE user.email IS UNIQUE;
+                """)
+                
                 result = session.execute_write(create_user, email, encrypted, name)
                 # end::call_create[]
 

@@ -56,7 +56,11 @@ export FLASK_ENV=development
 flask run
 
 Unit Tests (only if the connection to a sandbox instance is present)-
+
 1) pytest tests/01_connect_to_neo4j__test.py
+
 2) pytest -s tests/02_movie_list__test.py
+
 3) pytest tests/03_registering_a_user__test.py
+
 4) pytest tests/04_handle_constraint_errors__test.py
