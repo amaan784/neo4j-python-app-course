@@ -72,8 +72,8 @@ flask run
 
 7) pytest tests/07_favorites_list__test.py
 
-8) 
+8) pytest tests/08_favorite_flag__test.py
 
-9)
+9) pytest -s tests/09_genre_list__test.py
 
 10)
