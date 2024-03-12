@@ -1,8 +1,7 @@
 == NOTE: 
 - this forked repo is heavily dependent on neo4j python course's sandbox instance which expires every 3-7 days. 
-- It is affected by the sandbox instance and the gitpod workspace ip address or maybe local ip address. 
-- It requires starting a new workspace from the course then cloning and rebase while pulling.
-
+- It is affected by the sandbox instance and the gitpod workspace ip address or maybe local ip address or maybe just the sandbox instance. 
+- It requires starting a new gitpod workspace from the course and then changing the remote URL repository
 
 - Running locally-
 - requires changing up the .env file (dont push that file since it contains credentials for sandbox)
