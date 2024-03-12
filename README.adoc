@@ -77,3 +77,13 @@ flask run
 9) pytest -s tests/09_genre_list__test.py
 
 10) pytest -s tests/10_genre_details__test.py
+
+11) pytest -s tests/11_movie_lists__test.py
+
+12)
+
+13)
+
+14)
+
+15)
