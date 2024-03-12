@@ -84,6 +84,6 @@ flask run
 
 13) pytest -s tests/13_listing_ratings__test.py
 
-14)
+14) pytest -s tests/14_person_list__test.py
 
 15)
