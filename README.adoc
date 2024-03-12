@@ -86,4 +86,4 @@ flask run
 
 14) pytest -s tests/14_person_list__test.py
 
-15)
+15) pytest -s tests/15_person_profile__test.py
